@@ -16,8 +16,8 @@ XSF occurs when the following scenarios are initiated from different domains:
 
 - One movie loads another movie with `loadMovie*` functions (or other hacks) and has access to the same sandbox, or part of it.
 - An HTML page uses JavaScript to command an Adobe Flash movie, for example, by calling:
-  - `GetVariable` to access Flash public and static objects from JavaScript as a string.
-  - `SetVariable` to set a static or public Flash object to a new string value with JavaScript.
+    - `GetVariable` to access Flash public and static objects from JavaScript as a string.
+    - `SetVariable` to set a static or public Flash object to a new string value with JavaScript.
 - Unexpected communications between the browser and SWF application, which could result in stealing data from the SWF application.
 
 XSF may be performed by forcing a flawed SWF to load an external evil Flash file. This attack could result in XSS or in the modification of the GUI in order to fool a user to insert credentials on a fake Flash form. XSF could be used in the presence of Flash HTML Injection or external SWF files when `loadMovie*` methods are used.
@@ -153,8 +153,8 @@ Unsafe Methods since version r47 are:
 - `FScrollPane.loadScrollContent()`
 - `LoadVars.load`
 - `LoadVars.send`
-- `XML.load ( 'url' )`
-- `LoadVars.load ( 'url' )`
+- `XML.load( 'url' )`
+- `LoadVars.load( 'url' )`
 - `Sound.loadSound( 'url' , isStreaming );`
 - `NetStream.play( 'url' );`
 - `flash.external.ExternalInterface.call(_root.callback)`

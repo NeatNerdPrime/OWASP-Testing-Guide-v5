@@ -187,6 +187,14 @@
                     "Assess that the access control configuration for the storage services is properly in place."
                   ]
                 }
+                ,{
+                "name":"Testing for Content Security Policy",
+                "id":"WSTG-CONF-12",
+                "reference":"https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy.html",
+                "objectives":[
+                    "Review the Content-Security-Policy header or meta element to identify misconfigurations."
+                  ]
+                }
             ]
         }
         ,"Identity Management Testing": {
@@ -247,7 +255,7 @@
                 "id":"WSTG-ATHN-01",
                 "reference":"https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/01-Testing_for_Credentials_Transported_over_an_Encrypted_Channel.html",
                 "objectives":[
-                    "Assess whether any use case of the web site or application causes the server or the client to exchange credentials without encryption."
+                    ""
                   ]
                 }
                 ,{
@@ -255,8 +263,8 @@
                 "id":"WSTG-ATHN-02",
                 "reference":"https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/02-Testing_for_Default_Credentials.html",
                 "objectives":[
-                    "Enumerate the applications for default credentials and validate if they still exist.",
-                    "Review and assess new user accounts and if they are created with any defaults or identifiable patterns."
+                    "Determine whether the application has any user accounts with default passwords.",
+                    "Review whether new user accounts are created with weak or predictable passwords."
                   ]
                 }
                 ,{
@@ -315,8 +323,7 @@
                 "id":"WSTG-ATHN-09",
                 "reference":"https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/09-Testing_for_Weak_Password_Change_or_Reset_Functionalities.html",
                 "objectives":[
-                    "Determine the resistance of the application to subversion of the account change process allowing someone to change the password of an account.",
-                    "Determine the resistance of the passwords reset functionality against guessing or bypassing."
+                    "Determine whether the password change and reset functionality allows accounts to be compromised."
                   ]
                 }
                 ,{
@@ -451,6 +458,15 @@
                 "objectives":[
                     "Identify vulnerable session cookies.",
                     "Hijack vulnerable cookies and assess the risk level."
+                  ]
+                }
+                ,{
+                "name":"Testing JSON Web Tokens",
+                "id":"WSTG-SESS-10",
+                "reference":"https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens.html",
+                "objectives":[
+                    "Determine whether the JWTs expose sensitive information.",
+                    "Determine whether the JWTs can be tampered with or modified."
                   ]
                 }
             ]
